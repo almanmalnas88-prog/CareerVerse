@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CareerVerse - Discover Your Career</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+    <link
+        rel="manifest"
+        href="/manifest.json"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     HEADER
+===================================== -->
+
+<header class="navbar">
+
+    <div class="logo">
+        Career<span>Verse</span>
+    </div>
+
+    <button
+        class="nav-button"
+        onclick="startAssessment()"
+    >
+        Start Assessment
+    </button>
+
+</header>
+
+
+
+<!-- =====================================
+     HOME
+===================================== -->
+
+<section
+    id="home"
+    class="hero"
+>
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            YOUR CAREER. YOUR FUTURE.
+        </p>
+
+        <h1>
+            Don't follow the
+            <span>trend.</span>
+            Find your
+            <span>career.</span>
+        </h1>
+
+        <p class="hero-text">
+
+            CareerVerse helps students discover
+            careers based on their interests,
+            skills and natural strengths.
+
+            <br><br>
+
+            Whether you dream of becoming an
+            actor, singer, lawyer, farmer,
+            entrepreneur, engineer or anything
+            else — your career should match YOU.
+
+        </p>
+
+        <button
+            class="main-button"
+            onclick="startAssessment()"
+        >
+            Discover My Career →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PROFILE
+===================================== -->
+
+<section
+    id="profile"
+    class="profile-section"
+>
+
+    <div class="card">
+
+        <h2>
+            Tell us about yourself
+        </h2>
+
+        <p class="subtitle">
+            This helps CareerVerse understand you better.
+        </p>
+
+
+        <label>
+            Your Name
+        </label>
+
+        <input
+            type="text"
+            id="studentName"
+            placeholder="Enter your name"
+        >
+
+
+        <label>
+            Your Age
+        </label>
+
+        <input
+            type="number"
+            id="studentAge"
+            placeholder="Enter your age"
+        >
+
+
+        <label>
+            Current Education
+        </label>
+
+        <input
+            type="text"
+            id="studentEducation"
+            placeholder="Example: Class 12, B.Com, B.Tech"
+        >
+
+
+        <label>
+            City
+        </label>
+
+        <input
+            type="text"
+            id="studentCity"
+            placeholder="Enter your city"
+        >
+
+
+        <label>
+            Family Occupation
+        </label>
+
+        <input
+            type="text"
+            id="familyOccupation"
+            placeholder="Example: Farmer, Business, Teacher"
+        >
+
+
+        <button
+            class="main-button"
+            onclick="loadQuestions()"
+        >
+            Continue →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     ASSESSMENT
+===================================== -->
+
+<section
+    id="assessment"
+    class="assessment-section"
+>
+
+    <div class="assessment-card">
+
+        <div class="progress-container">
+
+            <div
+                id="progress"
+                class="progress"
+            ></div>
+
+        </div>
+
+
+        <p
+            id="questionNumber"
+            class="question-number"
+        >
+            Question 1
+        </p>
+
+
+        <h2
+            id="questionText"
+        >
+            Loading question...
+        </h2>
+
+
+        <div
+            id="options"
+            class="options"
+        ></div>
+
+
+        <button
+            id="nextButton"
+            class="main-button"
+            onclick="nextQuestion()"
+        >
+            Next →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     RESULT
+===================================== -->
+
+<section
+    id="result"
+    class="result-section"
+>
+
+    <div class="result-card">
+
+        <p class="small-title">
+            YOUR CAREER MATCH
+        </p>
+
+        <h2>
+            Your Results 🎯
+        </h2>
+
+
+        <p id="resultIntro"></p>
+
+
+        <div
+            id="careerResults"
+        ></div>
+
+
+        <button
+            class="main-button"
+            onclick="location.reload()"
+        >
+            Take Assessment Again
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer>
+
+    <p>
+        CareerVerse © 2026
+    </p>
+
+    <p>
+        Discover your talent. Build your future.
+    </p>
+
+</footer>
+
+
+
+<script src="/script.js"></script>
+
+</body>
+
+</html>

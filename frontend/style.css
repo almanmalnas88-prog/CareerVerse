@@ -1,0 +1,709 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f7f5ff;
+
+    color: #171717;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar {
+
+    height: 75px;
+
+    padding:
+        0 7%;
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+    background: white;
+
+    border-bottom:
+        1px solid #eeeeee;
+}
+
+
+.logo {
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+}
+
+
+.logo span {
+
+    color: #6d28d9;
+
+}
+
+
+.nav-button {
+
+    background:
+        #6d28d9;
+
+    color: white;
+
+    border: none;
+
+    padding:
+        12px 20px;
+
+    border-radius:
+        8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+
+    min-height:
+        calc(100vh - 75px);
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        70px 7%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #eee7ff
+        );
+
+}
+
+
+.hero-content {
+
+    max-width:
+        900px;
+
+}
+
+
+.small-title {
+
+    color:
+        #6d28d9;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(
+            45px,
+            7vw,
+            80px
+        );
+
+    line-height:
+        1.05;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.hero h1 span {
+
+    color:
+        #6d28d9;
+
+}
+
+
+.hero-text {
+
+    color:
+        #666;
+
+    font-size:
+        19px;
+
+    line-height:
+        1.7;
+
+    max-width:
+        700px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.main-button {
+
+    background:
+        #6d28d9;
+
+    color:
+        white;
+
+    border:
+        none;
+
+    padding:
+        14px 25px;
+
+    border-radius:
+        9px;
+
+    font-size:
+        16px;
+
+    font-weight:
+        bold;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.2s;
+
+}
+
+
+.main-button:hover {
+
+    background:
+        #4c1d95;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =====================================
+   PROFILE
+===================================== */
+
+.profile-section {
+
+    display:
+        none;
+
+    min-height:
+        100vh;
+
+    padding:
+        70px 20px;
+
+}
+
+
+.card {
+
+    background:
+        white;
+
+    max-width:
+        650px;
+
+    margin:
+        auto;
+
+    padding:
+        40px;
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        0 10px 40px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+
+}
+
+
+.card h2 {
+
+    font-size:
+        34px;
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.subtitle {
+
+    color:
+        #777;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+label {
+
+    display:
+        block;
+
+    margin:
+        18px 0 7px;
+
+    font-weight:
+        bold;
+
+}
+
+
+input {
+
+    width:
+        100%;
+
+    padding:
+        14px;
+
+    border:
+        1px solid #ddd;
+
+    border-radius:
+        8px;
+
+    font-size:
+        15px;
+
+}
+
+
+input:focus {
+
+    outline:
+        none;
+
+    border-color:
+        #6d28d9;
+
+}
+
+
+.card .main-button {
+
+    margin-top:
+        25px;
+
+}
+
+
+/* =====================================
+   ASSESSMENT
+===================================== */
+
+.assessment-section {
+
+    display:
+        none;
+
+    min-height:
+        100vh;
+
+    padding:
+        70px 20px;
+
+}
+
+
+.assessment-card {
+
+    max-width:
+        850px;
+
+    margin:
+        auto;
+
+}
+
+
+.progress-container {
+
+    height:
+        8px;
+
+    background:
+        #ddd;
+
+    border-radius:
+        20px;
+
+    overflow:
+        hidden;
+
+    margin-bottom:
+        35px;
+
+}
+
+
+.progress {
+
+    width:
+        0%;
+
+    height:
+        100%;
+
+    background:
+        #6d28d9;
+
+    transition:
+        0.3s;
+
+}
+
+
+.question-number {
+
+    color:
+        #6d28d9;
+
+    font-weight:
+        bold;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.assessment-card h2 {
+
+    font-size:
+        36px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.options {
+
+    display:
+        grid;
+
+    gap:
+        15px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.option {
+
+    width:
+        100%;
+
+    text-align:
+        left;
+
+    background:
+        white;
+
+    border:
+        2px solid #ddd;
+
+    padding:
+        20px;
+
+    border-radius:
+        12px;
+
+    cursor:
+        pointer;
+
+    font-size:
+        16px;
+
+    transition:
+        0.2s;
+
+}
+
+
+.option:hover {
+
+    border-color:
+        #6d28d9;
+
+}
+
+
+.option.selected {
+
+    border-color:
+        #6d28d9;
+
+    background:
+        #eee7ff;
+
+}
+
+
+/* =====================================
+   RESULTS
+===================================== */
+
+.result-section {
+
+    display:
+        none;
+
+    min-height:
+        100vh;
+
+    padding:
+        70px 20px;
+
+}
+
+
+.result-card {
+
+    max-width:
+        900px;
+
+    margin:
+        auto;
+
+    background:
+        white;
+
+    padding:
+        45px;
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        0 10px 40px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+
+}
+
+
+.result-card h2 {
+
+    font-size:
+        40px;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+#resultIntro {
+
+    color:
+        #666;
+
+    line-height:
+        1.7;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.career {
+
+    background:
+        #f8f6ff;
+
+    padding:
+        25px;
+
+    margin-bottom:
+        15px;
+
+    border-radius:
+        13px;
+
+    border-left:
+        5px solid #6d28d9;
+
+}
+
+
+.career h3 {
+
+    color:
+        #6d28d9;
+
+    margin-bottom:
+        10px;
+
+    font-size:
+        24px;
+
+}
+
+
+.career p {
+
+    color:
+        #555;
+
+    line-height:
+        1.6;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    background:
+        white;
+
+    text-align:
+        center;
+
+    padding:
+        25px;
+
+    color:
+        #777;
+
+}
+
+
+footer p {
+
+    margin:
+        5px;
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (
+    max-width: 700px
+) {
+
+    .navbar {
+
+        padding:
+            0 20px;
+
+    }
+
+
+    .nav-button {
+
+        display:
+            none;
+
+    }
+
+
+    .hero {
+
+        padding:
+            50px 25px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            48px;
+
+    }
+
+
+    .card,
+    .result-card {
+
+        padding:
+            25px;
+
+    }
+
+
+    .assessment-card h2 {
+
+        font-size:
+            28px;
+
+    }
+
+}

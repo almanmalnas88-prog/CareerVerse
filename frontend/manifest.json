@@ -1,0 +1,10 @@
+{
+    "name": "CareerVerse",
+    "short_name": "CareerVerse",
+    "description": "Discover the right career based on your interests, skills and strengths.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f7f5ff",
+    "theme_color": "#6d28d9",
+    "orientation": "portrait"
+}
