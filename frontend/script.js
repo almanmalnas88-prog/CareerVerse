@@ -28,11 +28,16 @@ function startAssessment() {
 // =====================================
 
 async function loadQuestions() {
+    console.log("LOAD QUESTIONS CALLED");
+    // =====================================
+    // GET STUDENT INFORMATION
+    // =====================================
 
     const name =
         document.getElementById(
             "studentName"
         ).value.trim();
+
 
     if (!name) {
 
@@ -44,7 +49,82 @@ async function loadQuestions() {
     }
 
 
+    const age =
+        document.getElementById(
+            "studentAge"
+        ).value;
+
+
+    const education =
+        document.getElementById(
+            "studentEducation"
+        ).value.trim();
+
+
+    const city =
+        document.getElementById(
+            "studentCity"
+        ).value.trim();
+
+
+    const familyOccupation =
+        document.getElementById(
+            "familyOccupation"
+        ).value.trim();
+
+
     try {
+
+        // =====================================
+        // SAVE STUDENT INFORMATION
+        // =====================================
+
+        const studentResponse =
+            await fetch(
+                "/api/student",
+                {
+
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body: JSON.stringify({
+
+                        name: name,
+
+                        age: age,
+
+                        education: education,
+
+                        city: city,
+
+                        family_occupation:
+                            familyOccupation
+
+                    })
+
+                }
+            );
+
+
+        if (!studentResponse.ok) {
+
+            const error =
+                await studentResponse.json();
+
+            throw new Error(
+                error.error ||
+                "Could not save student"
+            );
+        }
+
+
+        // =====================================
+        // LOAD QUESTIONS FROM MYSQL
+        // =====================================
 
         const response =
             await fetch(
@@ -74,6 +154,10 @@ async function loadQuestions() {
         }
 
 
+        // =====================================
+        // SHOW ASSESSMENT PAGE
+        // =====================================
+
         document.getElementById(
             "profile"
         ).style.display = "none";
@@ -99,8 +183,7 @@ async function loadQuestions() {
         console.error(error);
 
         alert(
-            "Database connection problem. " +
-            "Check your Python server."
+            "Could not save student or load questions."
         );
     }
 }
@@ -425,31 +508,31 @@ function showResults(result) {
 // REGISTER SERVICE WORKER
 // =====================================
 
-if ("serviceWorker" in navigator) {
-
-    window.addEventListener("load", function () {
-
-        navigator.serviceWorker
-            .register("/service-worker.js")
-
-            .then(function (registration) {
-
-                console.log(
-                    "CareerVerse Service Worker registered:",
-                    registration
-                );
-
-            })
-
-            .catch(function (error) {
-
-                console.error(
-                    "Service Worker registration failed:",
-                    error
-                );
-
-            });
-
-    });
-
-}
+//if ("serviceWorker" in navigator) {
+//
+//    window.addEventListener("load", function () {
+//
+//        navigator.serviceWorker
+//            .register("/service-worker.js")
+//
+//            .then(function (registration) {
+//
+//                console.log(
+//                    "CareerVerse Service Worker registered:",
+//                    registration
+//                );
+//
+//            })
+//
+//            .catch(function (error) {
+//
+//                console.error(
+//                    "Service Worker registration failed:",
+//                    error
+//                );
+//
+//            });
+//
+//    });
+//
+//}
