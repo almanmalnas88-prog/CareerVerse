@@ -28,7 +28,7 @@ function startAssessment() {
 // =====================================
 
 async function loadQuestions() {
-    console.log("LOAD QUESTIONS CALLED");
+
     // =====================================
     // GET STUDENT INFORMATION
     // =====================================
@@ -502,37 +502,3 @@ function showResults(result) {
 
     window.scrollTo(0, 0);
 }
-
-
-// =====================================
-// REGISTER SERVICE WORKER
-// =====================================
-
-//if ("serviceWorker" in navigator) {
-//
-//    window.addEventListener("load", function () {
-//
-//        navigator.serviceWorker
-//            .register("/service-worker.js")
-//
-//            .then(function (registration) {
-//
-//                console.log(
-//                    "CareerVerse Service Worker registered:",
-//                    registration
-//                );
-//
-//            })
-//
-//            .catch(function (error) {
-//
-//                console.error(
-//                    "Service Worker registration failed:",
-//                    error
-//                );
-//
-//            });
-//
-//    });
-//
-//}
